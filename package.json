@@ -1,0 +1,65 @@
+{
+	"name": "@paperoffice-ai/n8n-nodes-paperoffice",
+	"version": "0.1.0",
+	"description": "n8n nodes for PaperOffice AI: archive documents, extract invoice data, redact PDFs, search your document archive and queue documents for human review.",
+	"license": "MIT",
+	"homepage": "https://paperoffice.ai/en/",
+	"keywords": [
+		"n8n-community-node-package",
+		"paperoffice",
+		"paperoffice-ai",
+		"document-ai",
+		"ocr",
+		"idp",
+		"invoice",
+		"redaction",
+		"dms",
+		"human-in-the-loop"
+	],
+	"author": {
+		"name": "PaperOffice AI",
+		"email": "vendor.n8n@paperoffice.ai"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/paperoffice-ai/n8n-nodes-paperoffice.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"test": "npm run build && node --test test/*.test.js",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/PaperOfficeAiApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/PaperOfficeAi/PaperOfficeAi.node.js",
+			"dist/nodes/PaperOfficeAiTrigger/PaperOfficeAiTrigger.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.54.4",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^21.1.0",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}

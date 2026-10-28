@@ -1,0 +1,14 @@
+{
+	"node": "@paperoffice-ai/n8n-nodes-paperoffice.paperOfficeAi",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Data & Storage", "Productivity", "Finance & Accounting"],
+	"resources": {
+		"credentialDocumentation": [
+			{ "url": "https://github.com/paperoffice-ai/n8n-nodes-paperoffice?tab=readme-ov-file#credentials" }
+		],
+		"primaryDocumentation": [
+			{ "url": "https://github.com/paperoffice-ai/n8n-nodes-paperoffice?tab=readme-ov-file" }
+		]
+	}
+}
