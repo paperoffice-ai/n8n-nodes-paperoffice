@@ -6,7 +6,7 @@ n8n community nodes for [PaperOffice AI](https://paperoffice.ai/en/): archive do
 - [Credentials](#credentials)
 - [Operations](#operations)
 - [Trigger](#trigger)
-- [Costs](#costs)
+- [Billing](#billing)
 - [Limitations](#limitations)
 - [Compatibility](#compatibility)
 - [Resources](#resources)
@@ -62,9 +62,9 @@ The reviewers' decision is sent by PaperOffice AI as a signed webhook. Ready-mad
 
 **PaperOffice AI Trigger** starts a workflow when a new document arrives in a workspace (polling). The first poll after activation only remembers the newest document; later polls return the documents added since then, oldest first.
 
-## Costs
+## Billing
 
-Every PaperOffice AI call is paid with credits from your PaperOffice AI account, also when it is rejected (for example because of an invalid key). Higher document AI models are paid at a higher rate. Status checks of a running job are paid calls too, so the node checks less often the longer a job runs. Each poll of the trigger is a paid call; choose a poll interval that fits how often documents arrive. Prices are listed in your PaperOffice AI account.
+No specific plan is required. Usage is billed to your PaperOffice AI account as usual.
 
 ## Limitations
 

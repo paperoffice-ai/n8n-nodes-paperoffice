@@ -28,7 +28,7 @@ export class PaperOfficeAiTrigger implements INodeType {
 		credentials: [{ name: 'paperOfficeAiApi', required: true }],
 		properties: [
 			{
-				displayName: 'Each poll is a paid PaperOffice AI call. Choose a poll interval that fits how often documents arrive.',
+				displayName: 'No specific plan is required. Usage is billed to your PaperOffice AI account as usual. Choose a poll interval that fits how often documents arrive.',
 				name: 'paidNotice',
 				type: 'notice',
 				default: '',

@@ -1,6 +1,6 @@
 {
 	"name": "@paperoffice-ai/n8n-nodes-paperoffice",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "n8n nodes for PaperOffice AI: archive documents, extract invoice data, redact PDFs, search your document archive and queue documents for human review.",
 	"license": "MIT",
 	"homepage": "https://paperoffice.ai/en/",

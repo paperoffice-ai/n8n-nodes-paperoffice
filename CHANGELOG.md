@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- README and notices: plain billing note instead of cost details.
+
 ## 0.1.1
 
 - README: removed the sentence about where document processing runs.

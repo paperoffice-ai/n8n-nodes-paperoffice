@@ -1,6 +1,6 @@
 import type { INodeProperties } from 'n8n-workflow';
 
-const PAID = 'Every PaperOffice AI call is paid with credits from your account, also when it is rejected.';
+const PAID = 'No specific plan is required. Usage is billed to your PaperOffice AI account as usual.';
 
 const show = (resource: string, operation: string[]) => ({ show: { resource: [resource], operation } });
 
@@ -133,7 +133,7 @@ const waitFields = (resource: string, operation: string[]): INodeProperties[] =>
 		type: 'number',
 		typeOptions: { minValue: 30, maxValue: 900 },
 		default: 300,
-		description: 'How long to wait for a long-running job. Status checks are paid calls and become less frequent over time.',
+		description: 'How long to wait for a long-running job. Status checks become less frequent over time.',
 		displayOptions: { show: { resource: [resource], operation, waitForResult: [true] } },
 	},
 ];
@@ -179,7 +179,7 @@ export const documentFields: INodeProperties[] = [
 					{ name: 'Workspace Default', value: '' },
 				],
 				default: '',
-				description: 'Automatic AI-DMS analysis after upload (paid per page). Empty uses the workspace setting.',
+				description: 'Automatic AI-DMS analysis after upload (paid). Empty uses the workspace setting.',
 			},
 		],
 	},
@@ -289,7 +289,7 @@ export const documentAiFields: INodeProperties[] = [
 			{ name: 'Ultra Pro Max', value: 'ultra-pro-max' },
 		],
 		default: 'basic-pro-max',
-		description: 'Basic = OCR + vision, Premium = + AI thinking, Ultra = + AI reasoning. Pro and Pro Max allow more pages. Higher models are paid at a higher rate.',
+		description: 'Basic = OCR + vision, Premium = + AI thinking, Ultra = + AI reasoning. Pro and Pro Max allow more pages.',
 		displayOptions: show('documentAi', ['extract']),
 	},
 	{
@@ -302,7 +302,7 @@ export const documentAiFields: INodeProperties[] = [
 			{ name: 'Ultra', value: 'ultra' },
 		],
 		default: 'premium',
-		description: 'Higher models detect more personal data and are paid at a higher rate. Pseudonymize requires Ultra.',
+		description: 'Higher models detect more personal data. Pseudonymize requires Ultra.',
 		displayOptions: show('documentAi', ['redact']),
 	},
 	{
