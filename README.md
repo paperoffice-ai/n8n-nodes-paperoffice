@@ -2,8 +2,6 @@
 
 n8n community nodes for [PaperOffice AI](https://paperoffice.ai/en/): archive documents, extract invoice data, redact PDFs, search your document archive and send documents to a human reviewer, from any n8n workflow.
 
-Document processing runs on PaperOffice AI's own servers, without external AI providers.
-
 - [Installation](#installation)
 - [Credentials](#credentials)
 - [Operations](#operations)
